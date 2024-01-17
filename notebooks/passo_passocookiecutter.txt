@@ -1,0 +1,204 @@
+1 passo: entra na pag do projeto ou criar a pasta do projeto
+2 passo: Criar uma virtualenv ($ python3 -m venv nome_do_ambiente) ou ativar uma que ja tenha ($ source nome_do_ambiente/bin/activate) 
+3 passo: $ pip install cookiecutter
+4 passo: criar um arquivo chamado : $ vim ou touch cookiecutter.json
+5 passo: dentro do vim voce cria o json assim chave e valor {"projet": "data science"  linha de baixo "autor": "Allan Miranda"}
+6 passo: Criar uma pasta para acessar a var dentro do json ex. acessar a project : $ mkdir {{cookiecutter .project}}, enter e passa um tree para olhar
+7 passo: entrar 
+
+dentro dela é aasim : $ cd \{\{cookiecutter.project\}\}/
+8 passo: Cria um readme: $ touch README.md, abre para editar: $ vim README.md, escreva o titulo: # {{cookiecutter.project}} Lin Baix This project is made by {{cookiecutter.author}}, S
+9 passo: pode criar pastas : $ mkdir notebooks, $ mkdir data, $ mkdir models, $ mkdir parameters
+10 passo Saia fora do cookiecutter, passa o comand : $ l depois chama ele assim comando: cookiecutter . o . quer dizer pega arq json que esta nessa pasta local , ela vai pega a pasta como templete
+ que esta la  e vai substituir pelo que vc escrever no que ele pedir, 
+11 passo: prencha os que ele pedir como deseja ex: project[data science] passa o nome do projeto  confere com: l depois pssa um: $ tree para ver.
+
+# Chamando o cookiecutter
+
+Psso 1 $ cookiecutter .
+passo 2 vai vir o tamplete so passa o nome projeto depis do author
+paaso 3 $ l olha os salvos , ve que ele cria a pasta nome projeto
+passo 4 passa a pasta $ cd nome\ projeto 
+passo 5 $ cd \{\{cookiecutter.project\}\} depois $ l confere as pastas que tem 
+passo 6 coloca as coisas dentro do README $ vim README.md e faz a modificacao ex: # LICENSE {{cookiecutter.license}}
+
+
+Salvando o Template em um Repositório Git:
+Crie um repositório no GitHub (ou outra plataforma):
+Crie um novo repositório para o seu template Cookiecutter na plataforma de hospedagem de sua escolha (por exemplo, GitHub, GitLab, Bitbucket).
+Adicione e comprometa seu template ao repositório:
+Adicione todos os arquivos do seu template Cookiecutter ao repositório.
+Faça o commit e envie para o repositório remoto.
+bash
+Copy code
+git add .
+git commit -m "Adicionando template Cookiecutter"
+git push origin master
+Usando o Template em Projetos Futuros:
+Clone o Repositório:
+Clone o repositório do template para o seu sistema de arquivos local.
+bash
+Copy code
+git clone URL_DO_SEU_REPOSITORIO
+Use o Cookiecutter para criar um novo projeto baseado no template:
+Vá para o diretório onde deseja criar o novo projeto.
+Execute o comando Cookiecutter, apontando para o repositório clonado.
+bash
+Copy code
+cookiecutter CAMINHO_PARA_O_REPOSITORIO_CLONADO
+Siga as instruções:
+O Cookiecutter solicitará informações específicas para preencher no novo projeto. Responda conforme necessário.
+Seu novo projeto será criado:
+O Cookiecutter criará um novo projeto usando o template, preenchendo as informações que você forneceu.
+Lembre-se de que o URL_DO_SEU_REPOSITORIO e CAMINHO_PARA_O_REPOSITORIO_CLONADO devem ser substituídos pelos URLs reais do seu repositório Git. Certifique-se de que o repositório seja configurado como público ou que você tenha as permissões necessárias para cloná-lo.
+
+Ao seguir essas etapas, você poderá criar projetos futuros usando seu template Cookiecutter de maneira consistente e eficiente.
+
+ 1 passo: entra na pag do projeto ou criar a pasta do projeto
+2 passo: Criar uma virtualenv ($ python3 -m venv nome_do_ambiente) ou ativar uma que ja tenha ($ source nome_do_ambiente/bin/activate) 
+3 passo: $ pip install cookiecutter
+4 passo: criar um arquivo chamado : $ vim ou touch cookiecutter.json
+5 passo: dentro do vim voce cria o json assim chave e valor {"projet": "data science"  linha de baixo "autor": "Allan Miranda"}
+6 passo: Criar uma pasta para acessar a var dentro do json ex. acessar a project : $ mkdir {{cookiecutter .project}}, enter e passa um tree para olhar
+7 passo: entrar 
+
+dentro dela é aasim : $ cd \{\{cookiecutter.project\}\}/
+8 passo: Cria um readme: $ touch README.md, abre para editar: $ vim README.md, escreva o titulo: # {{cookiecutter.project}} Lin Baix This project is made by {{cookiecutter.author}}, S
+9 passo: pode criar pastas : $ mkdir notebooks, $ mkdir data, $ mkdir models, $ mkdir parameters
+10 passo Saia fora do cookiecutter, passa o comand : $ l depois chama ele assim comando: cookiecutter . o . quer dizer pega arq json que esta nessa pasta local , ela vai pega a pasta como templete
+ que esta la  e vai substituir pelo que vc escrever no que ele pedir, 
+11 passo: prencha os que ele pedir como deseja ex: project[data science] passa o nome do projeto  confere com: l depois pssa um: $ tree para ver.
+
+# Chamando o cookiecutter
+
+Psso 1 $ cookiecutter .
+passo 2 vai vir o tamplete so passa o nome projeto depis do author
+paaso 3 $ l olha os salvos , ve que ele cria a pasta nome projeto
+passo 4 passa a pasta $ cd nome\ projeto 
+passo 5 $ cd \{\{cookiecutter.project\}\} depois $ l confere as pastas que tem 
+passo 6 coloca as coisas dentro do README $ vim README.md e faz a modificacao ex: # LICENSE {{cookiecutter.license}}
+
+
+Salvando o Template em um Repositório Git:
+Crie um repositório no GitHub (ou outra plataforma):
+Crie um novo repositório para o seu template Cookiecutter na plataforma de hospedagem de sua escolha (por exemplo, GitHub, GitLab, Bitbucket).
+Adicione e comprometa seu template ao repositório:
+Adicione todos os arquivos do seu template Cookiecutter ao repositório.
+Faça o commit e envie para o repositório remoto.
+bash
+Copy code
+git add .
+git commit -m "Adicionando template Cookiecutter"
+git push origin master
+Usando o Template em Projetos Futuros:
+Clone o Repositório:
+Clone o repositório do template para o seu sistema de arquivos local.
+bash
+Copy code
+git clone URL_DO_SEU_REPOSITORIO
+Use o Cookiecutter para criar um novo projeto baseado no template:
+Vá para o diretório onde deseja criar o novo projeto.
+Execute o comando Cookiecutter, apontando para o repositório clonado.
+bash
+Copy code
+cookiecutter CAMINHO_PARA_O_REPOSITORIO_CLONADO
+Siga as instruções:
+O Cookiecutter solicitará informações específicas para preencher no novo projeto. Responda conforme necessário.
+Seu novo projeto será criado:
+O Cookiecutter criará um novo projeto usando o template, preenchendo as informações que você forneceu.
+Lembre-se de que o URL_DO_SEU_REPOSITORIO e CAMINHO_PARA_O_REPOSITORIO_CLONADO devem ser substituídos pelos URLs reais do seu repositório Git. Certifique-se de que o repositório seja configurado como público ou que você tenha as permissões necessárias para cloná-lo.
+
+Ao seguir essas etapas, você poderá criar projetos futuros usando seu template Cookiecutter de maneira consistente e eficiente.
+
+
+
+
+
+
+
+
+
+Usando Cookiecutter para Iniciar Projetos
+
+Passo 1: Configuração Inicial
+Criar ou Acessar o Projeto:
+Entre na página do projeto ou crie uma nova pasta para o seu projeto.
+Configurar Ambiente Virtual:
+Crie uma virtualenv com o comando:
+bash
+Copy code
+python3 -m venv nome_do_ambiente
+Ou ative uma virtualenv existente:
+bash
+Copy code
+source nome_do_ambiente/bin/activate
+Instalar Cookiecutter:
+Instale o Cookiecutter usando o comando:
+bash
+Copy code
+pip install cookiecutter
+Passo 2: Configurar o Template
+Criar o Arquivo cookiecutter.json:
+Crie o arquivo cookiecutter.json usando:
+bash
+Copy code
+touch cookiecutter.json
+Configurar Variáveis no Arquivo cookiecutter.json:
+Abra o arquivo cookiecutter.json em um editor (como vim) e adicione variáveis, por exemplo:
+json
+Copy code
+{
+  "project": "data science",
+  "author": "Seu Nome"
+}
+Passo 3: Utilizar o Template
+Criar Estrutura de Diretórios Baseada no Template:
+Execute o Cookiecutter para criar uma estrutura de diretórios baseada no template:
+bash
+Copy code
+cookiecutter .
+Explorar a Estrutura Criada:
+Vá para a pasta do projeto criada e explore a estrutura de diretórios, por exemplo:
+bash
+Copy code
+cd nome_do_projeto
+tree
+Passo 4: Personalizar o Projeto
+Editar README.md:
+Crie e edite o arquivo README.md para incluir informações específicas do seu projeto:
+bash
+Copy code
+touch README.md
+vim README.md
+Conteúdo exemplo:
+markdown
+Copy code
+# Projeto de {{cookiecutter.project}}
+
+Este projeto foi criado por {{cookiecutter.author}}.
+Adicionar Pastas Personalizadas:
+Adicione pastas específicas para o seu projeto, por exemplo:
+bash
+Copy code
+mkdir notebooks data models parameters
+Passo 5: Utilizando o Template em Outros Projetos
+Salvar o Template em um Repositório Git:
+Crie um repositório no GitHub (ou outra plataforma) para o seu template Cookiecutter.
+Adicione, comite e envie para o repositório remoto:
+bash
+Copy code
+git add .
+git commit -m "Adicionando template Cookiecutter"
+git push origin master
+Usar o Template em Projetos Futuros:
+Clone o repositório do template para o seu sistema de arquivos local:
+bash
+Copy code
+git clone URL_DO_SEU_REPOSITORIO
+Vá para o diretório onde deseja criar o novo projeto e execute o Cookiecutter:
+bash
+Copy code
+cookiecutter CAMINHO_PARA_O_REPOSITORIO_CLONADO
+Lembre-se de substituir URL_DO_SEU_REPOSITORIO e CAMINHO_PARA_O_REPOSITORIO_CLONADO pelos URLs reais do seu repositório Git. Certifique-se de que o repositório seja público ou que você tenha as permissões necessárias para cloná-lo.
+
+Espero que este guia revisado seja mais claro e útil para os usuários!
